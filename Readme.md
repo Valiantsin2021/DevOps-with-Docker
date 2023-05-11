@@ -1,4 +1,6 @@
 # Excercises for course DevOps with Docker
 
 ### WIP
-added 3 first chapters of Part 1
+Part 1 completed
+Part 2 WIP
+Part 3 WIP
