@@ -1,0 +1,8 @@
+#Build image
+
+docker build -t frontend .
+
+
+# run container
+
+docker run -it -p 5000:5000 frontend

@@ -1,0 +1,9 @@
+FROM ubuntu:20.04
+# install curl
+RUN apt update && apt upgrade && apt install -y curl
+# working dir
+WORKDIR ./app
+# copy file to image
+COPY input.sh .
+# CMD command to run
+ENTRYPOINT [ "./input.sh" ]
