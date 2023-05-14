@@ -1,0 +1,6 @@
+TODO MVC apṗ deployed to Render cloud provider (https://render.com/)
+
+Git repository: https://github.com/Valiantsin2021/todomvc-complex
+
+Render.com is connected to the repository and automaticaly build and publish thé app on push to the repository
+https://valentin-todo-app.onrender.com/

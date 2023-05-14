@@ -1,0 +1,19 @@
+FROM node:16.20.0-slim as app
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install && npm run build
+
+FROM node:16.20.0-slim
+
+WORKDIR /root/
+
+RUN npm install -g serve
+
+COPY --from=app ./app/build ./build
+
+CMD ["npx", "serve", "-s", "-l", "3000", "build"] 
+
+EXPOSE 3000
