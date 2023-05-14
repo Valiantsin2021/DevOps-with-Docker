@@ -1,10 +1,16 @@
-FROM golang:alpine3.13
+FROM golang:alpine3.13 as build
 
 WORKDIR /app
 
 COPY . .
 
 RUN go build
+
+FROM scratch
+
+WORKDIR /root/
+
+COPY --from=build ./app/server ./server
 
 CMD ./server
 
